@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'twitter', '~> 6.2'
 gem 'figaro'
-
+gem 'webpacker'
 gem 'react-rails'
 
 group :development, :test do

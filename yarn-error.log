@@ -1,0 +1,53 @@
+Arguments: 
+  /Users/rs/.nvm/versions/node/v6.11.2/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js --ignore-engines
+
+PATH: 
+  /Users/rs/.npm-packages/bin:/Users/rs/.nvm/versions/node/v6.11.2/bin:/Users/rs/.rvm/gems/ruby-2.3.3/bin:/Users/rs/.rvm/gems/ruby-2.3.3@global/bin:/Users/rs/.rvm/rubies/ruby-2.3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/Users/rs/.rvm/bin:/Users/rs/.rvm/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  6.11.2
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "react-webpack-rails-tutorial",
+    "version": "0.0.1",
+    "private": true,
+    "engines": {
+      "node": "6.9.0",
+      "npm": "4.1.1"
+    },
+    "scripts": {
+      "postinstall": "cd client && yarn install",
+      "rails-server": "echo 'visit http://localhost:3000/hello_world' && foreman start -f Procfile.dev",
+      "test": "rspec"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c cd client && yarn install
+  Directory: /Users/rs/Projects/casetabs-challenge/twitterer
+  Output:
+  
+      at ProcessTermError.Error (native)
+      at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:30281:17)
+      at emitTwo (events.js:106:13)
+      at ChildProcess.emit (events.js:191:7)
+      at maybeClose (internal/child_process.js:891:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)

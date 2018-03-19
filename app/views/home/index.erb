@@ -3,20 +3,20 @@
 
   <div class="logo">
     <h1>Twitterer</h1>
-    <%= react_component("HelloWorld", { handle: "casetabs" }) %>
+    <%= react_component("HelloWorld", { handle: @tweets.first.user.name }) %>
   </div>
 
   <% if @tweets.present? %>
-  <div class='body'>
-    <div>
-      <h2>@<%= @tweets.first.user.name %></h2>
+    <div class='body'>
+      <div>
+        <h2>@<%= @tweets.first.user.name %></h2>
+      </div>
+      <ul>
+      <% @tweets.each do |tweet| %>
+        <li><%= raw(tweet.full_text.gsub(/http(.*)\b/, '<a href="\1">\1</a>')) %></li>
+      <% end %>
+      </ul>
     </div>
-    <ul>
-    <% @tweets.each do |tweet| %>
-      <li><%= raw(tweet.full_text.gsub(/http(.*)\b/, '<a href="\1">\1</a>')) %></li>
-    <% end %>
-    </ul>
-  </div>
   <% else %>
     <div>
       <h4>Twitter user not found</h4>

@@ -1,10 +1,11 @@
 
 <div id='twitterer'>
+
   <div class="logo">
     <h1>Twitterer</h1>
   </div>
+
   <div class='header'>
-    
     <form id='twitter-form'>
       <input type='text' name='handle'/>
       <button type='submit'>Get Tweets</>
@@ -13,11 +14,18 @@
 
   <% if @tweets.present? %>
   <div class='body'>
+    <div>
+      <h2>@<%= @tweets.first.user.name %></h2>
+    </div>
     <ul>
     <% @tweets.each do |tweet| %>
-      <li><%= tweet.user.name %> | <%= raw(tweet.full_text.gsub(/http(.*)\b/, '<a href="\1">\1</a>')) %></li>
+      <li><%= raw(tweet.full_text.gsub(/http(.*)\b/, '<a href="\1">\1</a>')) %></li>
     <% end %>
     </ul>
   </div>
+  <% else %>
+    <div>
+      <h4>Twitter user not found</h4>
+    </div>
   <% end %>
 </div>

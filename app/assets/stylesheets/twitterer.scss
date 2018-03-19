@@ -2,18 +2,25 @@
   max-width: 786px;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: 30% auto;
+  grid-template-rows: 10% 10% auto;
   grid-template-columns: repeat(12, 8.33333%);
   font-family: 'IBM Plex Serif', serif;
-
-  .header {
+  .logo {
     grid-column: 1 / 12;
     grid-row: 1 / 1;
+    h1 {
+      text-align: right;
+      font-family: 'Pacifico', serif;
+    }
+  }
+  .header {
+    grid-column: 1 / 12;
+    grid-row: 2 / 2;
   }
   .body {
     grid-column: 1 / 12;
-    grid-row: 2 / 2;
-   }
+    grid-row: 3 / 3;
+  }
   ul {
     list-style-type: none;
     list-style-position: inside;
@@ -25,10 +32,6 @@
   }
   a {
     text-decoration: none;
-  }
-  form {
-    margin: 2em 0 0;
-    text-align: right;
   }
   input, button {
     font-family: 'IBM Plex Serif', serif;

@@ -3,17 +3,17 @@
 
   <div class="logo">
     <h1>Twitterer</h1>
-    <%= react_component("HelloWorld", { handle: @tweets.first.user.name }) %>
+
   </div>
 
   <% if @tweets.present? %>
     <div class='body'>
       <div>
-        <h2>@<%= @tweets.first.user.name %></h2>
+        <%= react_component("HelloWorld", { handle: @tweets.first.user.name }) %>
       </div>
       <ul>
       <% @tweets.each do |tweet| %>
-        <li><%= raw(tweet.full_text.gsub(/http(.*)\b/, '<a href="\1">\1</a>')) %></li>
+        <%= react_component("Tweet", { text: raw(tweet.full_text.gsub(/http(.*)\b/, '<a href="\1">\1</a>')) }) %>
       <% end %>
       </ul>
     </div>

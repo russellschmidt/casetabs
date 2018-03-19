@@ -8,3 +8,4 @@ Dependencies:
 * Postgres 0.018
 * Twitter 6.2
 * Figaro
+* react-rails

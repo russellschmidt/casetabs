@@ -5,13 +5,9 @@
   grid-template-rows: 30% auto;
   grid-template-columns: repeat(12, 8.33333%);
   font-family: 'IBM Plex Serif', serif;
-  .logo {
-    grid-column: 1 / 4;
-    grid-row: 1 / 1;  
-    font-family: 'Pacifico', cursive;
-  }
+
   .header {
-    grid-column: 5 / 12;
+    grid-column: 1 / 12;
     grid-row: 1 / 1;
   }
   .body {

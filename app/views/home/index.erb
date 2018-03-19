@@ -1,0 +1,11 @@
+<h1>Twitterer</h1>
+
+<% if @tweets.present? %>
+<div>
+  <ul>
+  <% @tweets.each do |tweet| %>
+    <li><%= tweet.full_text %></li>
+  <% end %>
+  </ul>
+</div>
+<% end %>

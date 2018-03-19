@@ -1,11 +1,21 @@
-<h1>Twitterer</h1>
 
-<% if @tweets.present? %>
-<div>
-  <ul>
-  <% @tweets.each do |tweet| %>
-    <li><%= tweet.user.name %> | <%= raw(tweet.full_text.gsub(/http(.*)\b/, '<a href="\1">\1</a>')) %></li>
+<div id='twitterer'>
+  <h1>Twitterer</h1>
+
+  <div>
+    <form>
+      <input type='text' name='handle'/>
+      <button type='submit'>Get Tweets</>
+    </form>
+  </div>
+
+  <% if @tweets.present? %>
+  <div>
+    <ul>
+    <% @tweets.each do |tweet| %>
+      <li><%= tweet.user.name %> | <%= raw(tweet.full_text.gsub(/http(.*)\b/, '<a href="\1">\1</a>')) %></li>
+    <% end %>
+    </ul>
+  </div>
   <% end %>
-  </ul>
 </div>
-<% end %>
